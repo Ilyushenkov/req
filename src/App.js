@@ -1,12 +1,13 @@
 
 import Cards from "./components/cards";
+import Change_phone from "./components/change_phone";
 
 function App() {
 
   return (
     <div className="App">
 
-      <Cards/>
+     <Change_phone/>
 
 
     </div>
