@@ -5,14 +5,13 @@ const ChangePhone = () => {
     function send(e){
         e.preventDefault()
         let body=JSON.stringify(phone)
-        console.log(body)
         let myHeaders = new Headers();
         myHeaders.append("Authorization", `Bearer ${localStorage.token}`)
         myHeaders.append("Content-Type", "application/json")
         let request_options={headers: myHeaders, body: body, method: 'PATCH'}
         fetch('http://pets.сделай.site/api/users/phone', request_options)
 
-            .then(response=>{let status=response.status/*console.log(response.status)*/
+            .then(response=>{let status=response.status
                 switch(status){
                 case 200: document.getElementById('message').style.display='block'
                           document.getElementById('error').style.display='none'
