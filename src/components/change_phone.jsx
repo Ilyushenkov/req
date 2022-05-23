@@ -29,7 +29,7 @@ const ChangePhone = () => {
             <input type={'submit'} value={'Отправить'} className={'bg-info text-white'}/>
             </form>
             <div className={'text-center border-1 border-info rounded-1 border p-1 m-3'} id={'message'} style={{display: 'none'}}>Вы успешно измели номер телефона</div>
-            <div className={'text-center border-1 bg-danger rounded-1 border p-1 m-3'} id={'error'} style={{display: 'none'}}>Вы не авторизовались</div>
+            <div className={'text-center border-1 border-danger rounded-1 border p-1 m-3'} id={'error'} style={{display: 'none'}}>Вы не авторизовались</div>
         </div>
     );
 };
