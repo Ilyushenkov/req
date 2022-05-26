@@ -10,7 +10,6 @@ const ChangePhone = () => {
         myHeaders.append("Content-Type", "application/json")
         let request_options={headers: myHeaders, body: body, method: 'PATCH'}
         fetch('http://pets.сделай.site/api/users/phone', request_options)
-
             .then(response=>{let status=response.status
                 switch(status){
                 case 200: document.getElementById('message').style.display='block'
