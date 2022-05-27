@@ -1,5 +1,7 @@
 import React from 'react';
-
+import {logDOM} from "@testing-library/react";
+let code=''
+let body=''
 const Form = () => {
 
     function send(e){
@@ -15,9 +17,22 @@ const Form = () => {
         headers.append('Authorization', 'Bearer 61ZtPrxgRVbzlp27tooVTdpoPx2WRUKmawZaOf28zljptnNucGElU9Tyn9W0nHWnahNSBqK5CPEOCnGv')
         let request_options={method: 'POST', 'headers':headers, 'body':form}
         console.log(headers)
-        fetch('http://pets.сделай.site/api/pets', request_options)
-            .then(response=>response.text())
-            .then(response=>console.log(response))
+       fetch('http://pets.сделай.site/api/pets', request_options)
+           .then((res)=>{
+
+               body=res.json()
+      /*             .then((req)=>{
+                      code= req.status
+                   })*/
+              // code=res.status
+           })
+
+           .then(()=>console.log(body))
+
+
+
+
+
     }
 
     return (
